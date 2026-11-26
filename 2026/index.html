@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SM DESIGN WORK | Photo Frames</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="logo.jpg" alt="SM Design Work Logo">
+      <div>
+        <h2>SM DESIGN WORK</h2>
+        <p>PHOTO FRAMES • PRINT • DESIGN</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#prices">Frame Prices</a>
+      <a href="#order">Order</a>
+      <a href="#game">Mini Game</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="gold-label">WELCOME TO SM DESIGN WORK</span>
+
+    <h1>Capture Your Memories<br>
+      <span>Forever...</span>
+    </h1>
+
+    <p>
+      Beautiful Photo Frames • High Quality Print •
+      Custom Design • Perfect Gift
+    </p>
+
+    <a href="#prices" class="gold-btn">VIEW FRAME PRICES</a>
+  </div>
+
+  <div class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800"
+         alt="Photo frame collection">
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div>💎 <h3>Premium Quality</h3></div>
+  <div>🖨️ <h3>High Quality Print</h3></div>
+  <div>🎨 <h3>Custom Design</h3></div>
+  <div>🎁 <h3>Perfect Gift</h3></div>
+</section>
+
+<!-- FRAME PRICE SECTION -->
+<section class="prices" id="prices">
+
+  <div class="section-heading">
+    <span>OUR PRICE LIST</span>
+    <h2>Photo Frame Sizes & Prices</h2>
+    <p>Choose your favourite size at the listed price.</p>
+  </div>
+
+  <div class="price-container">
+    <div class="price-header">
+      <span>FRAME SIZE</span>
+      <span>PRICE</span>
+    </div>
+
+    <div class="price-row">
+      <span>6 × 4 Inch</span>
+      <strong>₹250</strong>
+    </div>
+
+    <div class="price-row">
+      <span>6 × 8 Inch</span>
+      <strong>₹350</strong>
+    </div>
+
+    <div class="price-row">
+      <span>10 × 8 Inch</span>
+      <strong>₹450</strong>
+    </div>
+
+    <div class="price-row">
+      <span>A4 Paper Size</span>
+      <strong>₹550</strong>
+    </div>
+
+    <div class="price-row">
+      <span>12 × 8 Inch</span>
+      <strong>₹550</strong>
+    </div>
+
+    <div class="price-row featured">
+      <span>12 × 15 Inch</span>
+      <strong>₹1,000</strong>
+    </div>
+
+    <div class="price-row featured">
+      <span>12 × 18 Inch</span>
+      <strong>₹1,100</strong>
+    </div>
+
+    <div class="price-note">
+      ✨ Custom Design Available
+    </div>
+  </div>
+</section>
+
+<!-- ORDER SECTION -->
+<section class="order-section" id="order">
+
+  <div class="section-heading">
+    <span>PLACE YOUR ORDER</span>
+    <h2>Order Your Photo Frame</h2>
+    <p>Fill in your details and order directly through WhatsApp.</p>
+  </div>
+
+  <div class="order-box">
+    <form id="orderForm">
+
+      <label>Customer Name</label>
+      <input type="text" id="customerName"
+             placeholder="Enter your name" required>
+
+      <label>Mobile Number</label>
+      <input type="tel" id="mobile"
+             placeholder="10 digit mobile number"
+             pattern="[0-9]{10}" required>
+
+      <label>Select Frame Size</label>
+      <select id="frameSize" required>
+        <option value="">Choose Frame Size</option>
+        <option value="6 x 4 Inch">6 × 4 Inch</option>
+        <option value="6 x 8 Inch">6 × 8 Inch</option>
+        <option value="10 x 8 Inch">10 × 8 Inch</option>
+        <option value="A4 Paper Size">A4 Paper Size</option>
+        <option value="12 x 8 Inch">12 × 8 Inch</option>
+        <option value="12 x 15 Inch">12 × 15 Inch</option>
+        <option value="12 x 18 Inch">12 × 18 Inch</option>
+      </select>
+
+      <label>Quantity</label>
+      <input type="number" id="quantity"
+             min="1" value="1" required>
+
+      <div class="total-box">
+        <span>Price Per Frame</span>
+        <strong id="unitPrice">₹0</strong>
+
+        <span>Total Amount</span>
+        <strong id="totalPrice">₹0</strong>
+      </div>
+
+      <label>Photo / Design Requirements</label>
+      <textarea id="details"
+                placeholder="Enter your requirements..."></textarea>
+
+      <button type="submit" class="order-btn">
+        ORDER THROUGH WHATSAPP
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- MINI GAME -->
+<section class="game-section" id="game">
+
+  <div class="section-heading">
+    <span>ENTERTAINMENT ZONE</span>
+    <h2>🎮 Catch The Frame!</h2>
+    <p>Catch as many photo frames as possible in 20 seconds.</p>
+  </div>
+
+  <div class="game-box">
+    <div class="game-stats">
+      <span>Score: <b id="score">0</b></span>
+      <span>Time: <b id="timer">20</b>s</span>
+    </div>
+
+    <div class="game-area" id="gameArea">
+      <button id="target" class="target">🖼️</button>
+      <p id="gameMessage">Ready to play?</p>
+    </div>
+
+    <button class="gold-btn" id="startGame">START GAME</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+
+  <div class="section-heading">
+    <span>CONTACT US</span>
+    <h2>SM DESIGN WORK</h2>
+    <p>Capture Your Memories Forever...</p>
+  </div>
+
+  <div class="contact-card">
+    <h3>📞 Contact Numbers</h3>
+
+    <a href="tel:6369061301">6369061301</a>
+    <a href="tel:7639316162">7639316162</a>
+
+    <a class="gold-btn whatsapp"
+       href="https://wa.me/916369061301"
+       target="_blank">
+       CHAT ON WHATSAPP
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  <h2>SM DESIGN WORK</h2>
+  <p>PHOTO FRAMES • PRINT • DESIGN</p>
+  <p>Frame Your World With Style...</p>
+  <p>© 2026 SM DESIGN WORK. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
