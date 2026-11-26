@@ -1,0 +1,522 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+:root {
+  --dark: #202522;
+  --cream: #f4efe6;
+  --white: #fffdf9;
+  --orange: #bd6041;
+  --orange-light: #e7a17d;
+  --text: #343a35;
+  --muted: #85877f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* NAVIGATION */
+
+header {
+  background: var(--dark);
+  padding: 17px 6%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand img {
+  width: 65px;
+  height: 60px;
+  object-fit: contain;
+  background: white;
+  border-radius: 5px;
+}
+
+.brand h2 {
+  color: #fffdf9;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.brand p {
+  color: var(--orange-light);
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+nav {
+  display: flex;
+  gap: 23px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #e9e7df;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: var(--orange-light);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 520px;
+  padding: 75px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: var(--cream);
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.gold-label,
+.section-heading span {
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1.15;
+  margin: 25px 0;
+  color: var(--dark);
+}
+
+.hero h1 span {
+  color: var(--orange);
+  font-style: italic;
+}
+
+.hero p {
+  color: #73766e;
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.hero-photo {
+  position: relative;
+}
+
+.hero-photo img {
+  width: 100%;
+  max-width: 470px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 20px 20px 0 #d9bba7;
+}
+
+/* BUTTON */
+
+.gold-btn {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 16px 28px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.gold-btn:hover {
+  background: var(--dark);
+  transform: translateY(-3px);
+}
+
+/* FEATURES */
+
+.features {
+  background: var(--dark);
+  padding: 30px 7%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.features div {
+  color: var(--orange-light);
+  font-size: 26px;
+}
+
+.features h3 {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* SECTION HEADINGS */
+
+.prices,
+.order-section,
+.game-section,
+.contact-section {
+  padding: 85px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  color: var(--dark);
+  margin: 15px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* PRICE LIST */
+
+.prices {
+  background: #fffdf9;
+}
+
+.price-container {
+  max-width: 780px;
+  margin: auto;
+  background: white;
+  border: 1px solid #e8ddd0;
+  box-shadow: 0 15px 40px #20252210;
+}
+
+.price-header,
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  border-bottom: 1px solid #eee8df;
+  font-size: 18px;
+}
+
+.price-header {
+  background: var(--dark);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.price-row strong {
+  color: var(--orange);
+  font-size: 20px;
+}
+
+.price-row:hover {
+  background: #faf2eb;
+}
+
+.price-row.featured {
+  background: #f8e9df;
+}
+
+.price-row.featured strong {
+  color: #a3452c;
+}
+
+.price-note {
+  padding: 20px;
+  text-align: center;
+  background: var(--orange);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ORDER FORM */
+
+.order-section {
+  background: #eee7dc;
+}
+
+.order-box {
+  max-width: 570px;
+  margin: auto;
+  background: var(--white);
+  padding: 38px;
+  border-radius: 4px;
+  border-top: 4px solid var(--orange);
+  box-shadow: 0 15px 40px #20252212;
+}
+
+form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 18px 0 9px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ded9cf;
+  background: #faf9f5;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--dark);
+  outline: none;
+  border-radius: 3px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: var(--orange);
+}
+
+form textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+.total-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
+  padding: 22px;
+  margin-top: 22px;
+  background: var(--dark);
+  color: white;
+  border-left: 4px solid var(--orange);
+}
+
+.total-box strong {
+  color: var(--orange-light);
+  font-size: 20px;
+}
+
+.order-btn {
+  width: 100%;
+  padding: 17px;
+  margin-top: 22px;
+  background: var(--orange);
+  color: white;
+  border: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.order-btn:hover {
+  background: var(--dark);
+}
+
+/* MINI GAME */
+
+.game-section {
+  background: var(--cream);
+  text-align: center;
+}
+
+.game-box {
+  max-width: 520px;
+  margin: auto;
+  padding: 30px;
+  background: var(--dark);
+  color: white;
+  border-radius: 4px;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: space-around;
+  font-size: 17px;
+}
+
+.game-stats b {
+  color: var(--orange-light);
+}
+
+.game-area {
+  height: 230px;
+  background: #fffdf9;
+  margin: 25px 0;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--orange);
+}
+
+.target {
+  display: none;
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+#gameMessage {
+  position: absolute;
+  width: 100%;
+  top: 48%;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* CONTACT */
+
+.contact-section {
+  background: #fffdf9;
+  text-align: center;
+}
+
+.contact-card {
+  max-width: 420px;
+  margin: auto;
+  padding: 40px;
+  background: var(--dark);
+  color: white;
+  border-bottom: 5px solid var(--orange);
+}
+
+.contact-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.contact-card > a:not(.gold-btn) {
+  display: block;
+  color: var(--orange-light);
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.whatsapp {
+  margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 40px 15px;
+  background: #171c19;
+  text-align: center;
+  color: white;
+  line-height: 2;
+  border-top: 3px solid var(--orange);
+}
+
+footer h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--orange-light);
+  letter-spacing: 2px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 55px 7%;
+  }
+
+  .hero-photo img {
+    height: 260px;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
+
+@media(max-width: 500px) {
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .prices,
+  .order-section,
+  .game-section,
+  .contact-section {
+    padding: 55px 5%;
+  }
+
+  .price-header,
+  .price-row {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .price-row strong {
+    font-size: 17px;
+  }
+
+  .order-box {
+    padding: 22px;
+  }
+
+  .contact-card {
+    padding: 25px;
+  }
+}
